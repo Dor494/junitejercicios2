@@ -9,13 +9,15 @@ import org.junit.jupiter.params.provider.CsvSource;
 class Ejercicio2Test {
 
 	@CsvSource({
-		"user,pass,true",
-		"'',pass,false",
+		"user,Pass1,true",
+		"'',Pass1,false",
 		"user,'',false",
-		"nombredeusuariossuperlagruisimomayorde30caraceteres,pass,false",
+		"nombredeusuariossuperlagruisimomayorde30caraceteres,Pass1,false",
 		"user,unsuperpasswordlarguisimoconmasde30caracteresgigantedelto,false",
- 		"user,passwordincorrect,false",
-		"usuario,pass,false"
+		"user,pass,false",
+		"user,Pass2,false",
+		"usuario,Pass1,false",
+		"usuario,Pass2,false"
 	})
 	
 	@ParameterizedTest(name = "{index} => Con usuario ({0}) y password ({1}) sale {2}")
