@@ -1,21 +1,33 @@
 package ual.hmis.sesion06;
 
+/**
+ * @author Danielor
+ */
+
 public class Ejercicio4 {
 
-	public String compararCadenas(String P1, String P2) {
-		String P3 = "";
-		if(P1.equals(P2))
-			return P2;
-		else if(P1.isBlank() || P2.isBlank())
+	/**
+	 * Metodo que compara cadenas.
+	 * @param cadenaA
+	 * @param cadenaB
+	 * @return cadena resultante
+	 */
+	public String compararCadenas(final String cadenaA,
+			final String cadenaB) {
+		String cadenaC = "";
+		if (cadenaA.equals(cadenaB)) {
+			return cadenaB;
+		} else if (cadenaA.isBlank() || cadenaB.isBlank()) {
 			return "";
-		else
-			for(int i = 0; i<P1.length(); i++) {
-				for(int j = 0; j<P2.length(); j++) {
-					if(P1.charAt(i)==P2.charAt(j)) {
-						P3 += P1.charAt(i);
+		} else {
+			for (int i = 0; i < cadenaA.length(); i++) {
+				for (int j = 0; j < cadenaB.length(); j++) {
+					if (cadenaA.charAt(i) == cadenaB.charAt(j)) {
+						cadenaC += cadenaA.charAt(i);
 					}
 				}
 			}
-		return P3;
+		}
+		return cadenaC;
 	}
 }

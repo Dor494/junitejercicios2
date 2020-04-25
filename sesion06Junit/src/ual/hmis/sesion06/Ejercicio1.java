@@ -1,15 +1,29 @@
 package ual.hmis.sesion06;
 
-public class Ejercicio1{
-	public int transformar (int x) {
+/**
+ * @author Danielor
+ */
+
+public class Ejercicio1 {
+
+/**
+* Clase que tranforma los numeros.
+* @param x
+* @return resultado
+*/
+	public int transformar(final int x) {
+		final int tres = 3;
+		final int cinco = 5;
 		int resultado = 0;
-		if (x % 2 == 0) // % Resto de una división entre enteros (mod)
-			resultado = transformar (x/2);
-		else if (x % 3 == 0)
-			resultado = transformar (x/3);
-		else if (x % 5 == 0)
-			resultado = transformar (x/5);
-		else return x;
+		if (x % 2 == 0) {
+			resultado = transformar(x / 2);
+			} else if (x % tres == 0) {
+				resultado = transformar(x / tres);
+				} else if (x % cinco == 0) {
+					resultado = transformar(x / cinco);
+					} else {
+						return x;
+						}
 		return resultado;
 	}
 }
