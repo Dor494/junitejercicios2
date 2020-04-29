@@ -17,8 +17,6 @@ public class Ejercicio4 {
 		String cadenaC = "";
 		if (cadenaA.equals(cadenaB)) {
 			return cadenaB;
-		} else if (cadenaA.isBlank() || cadenaB.isBlank()) {
-			return "";
 		} else {
 			for (int i = 0; i < cadenaA.length(); i++) {
 				for (int j = 0; j < cadenaB.length(); j++) {
