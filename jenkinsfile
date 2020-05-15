@@ -10,7 +10,7 @@ pipeline {
     stage('Git fetch') { 
       steps {
         // Get some code from a GitHub repository
-        git 'https://github.com/Dor494/junitejercicios.git'
+        git 'https://github.com/Dor494/prueba1.git'
       }
     }
     stage('Compile, Test, Package') { 
